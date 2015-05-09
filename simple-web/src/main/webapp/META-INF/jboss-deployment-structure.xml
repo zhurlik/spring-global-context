@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-deployment-structure>
+    <deployment>
+        <dependencies>
+            <module name="com.zhurlik" />
+            <module name="org.springframework.core" />
+            <module name="org.springframework.web" />
+            <module name="org.springframework.context" />
+            <module name="org.springframework.context-support" />
+        </dependencies>
+    </deployment>
+</jboss-deployment-structure>

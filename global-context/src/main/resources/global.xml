@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+       <!-- to be able to use this context in the web.xml
+           <context-param>
+               <param-name>parentContextKey</param-name>
+               <param-value>rootContext</param-value>
+           </context-param>
+           <context-param>
+               <param-name>locatorFactorySelector</param-name>
+               <param-value>classpath*:global.xml</param-value>
+           </context-param>
+       -->
+       <bean id="rootContext" class="com.zhurlik.GlobalSpringContext"/>
+
+       <!-- to have a reference to itself -->
+       <bean class="com.zhurlik.GlobalSpringContext"/>
+
+       <bean id="test" class="java.lang.String">
+              <constructor-arg value="Welcome!!! Global Bean: #{T(java.util.UUID).randomUUID().toString()}"/>
+       </bean>
+</beans>

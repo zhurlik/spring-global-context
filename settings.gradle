@@ -1,0 +1,4 @@
+rootProject.name='wildfly-spring'
+
+include 'simple-web'
+include 'global-context'

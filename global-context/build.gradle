@@ -1,0 +1,31 @@
+plugins {
+    id "com.github.zhurlik.jbossmodules" version "0.9"
+}
+
+import static com.github.zhurlik.Ver.V_1_3
+
+apply plugin: 'java'
+
+jbossrepos {
+    'wildfly8.2' {
+        version = V_1_3
+    }
+}
+
+dependencies {
+    compile 'org.springframework:spring-web:4.1.6.RELEASE'
+    jbossmodules project(":global-context")
+}
+
+modules {
+    global {
+        moduleName = 'com.zhurlik'
+        resources = ["global-context-${version}.jar"]
+        dependencies = [
+                'org.springframework.core',
+                'org.springframework.beans',
+                'org.springframework.context'
+        ]
+    }
+}
+
