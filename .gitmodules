@@ -1,0 +1,3 @@
+[submodule "jboss-wildfly-modules"]
+	path = jboss-wildfly-modules
+	url = https://github.com/zhurlik/jboss-wildfly-modules
